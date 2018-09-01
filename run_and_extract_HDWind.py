@@ -35,7 +35,7 @@ def run(path_datos, path_results):
         os.remove(HDWM_OPT_DATA + '/windini_0.asc')
         shutil.move('windini_0.asc', HDWM_OPT_DATA)
         os.system(HDWM_OPT + "/build/HDWM")
-        shutil.move(HDWM_OPT_RESULTS +'/coronelWind.dat', path_results+'/'+name+'.dat')
+        shutil.move(HDWM_OPT_RESULTS +'/coronelWind.dat', path_results+'/'+str(name)+'.dat')
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
